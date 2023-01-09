@@ -24,6 +24,7 @@ async def on_connect(websocket, path):
 
     """
     charge_point_id = path.strip('/')
+    print(websocket,path)
     cp = ChargePoint(charge_point_id, websocket)
 
     await cp.start()
